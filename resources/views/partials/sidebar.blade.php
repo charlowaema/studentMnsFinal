@@ -61,7 +61,6 @@
 
                 </li>
 
-
                 {{-- Students --}}
                 <li class="nav-item">
 
@@ -75,7 +74,20 @@
                     </a>
 
                 </li>
+                
+                   {{-- Enrollments --}}
+                <li class="nav-item">
 
+                    <a href="{{route('enrollments.index')}}"
+                       class="nav-link">
+
+                        <i class="bi bi-people me-2"></i>
+
+                        Enrollments
+
+                    </a>
+
+                </li>
 
                 {{-- Courses --}}
                 <li class="nav-item">
@@ -93,24 +105,17 @@
 
 
                 {{-- Fees --}}
-                <li class="nav-item">
-
-                    <a href="#"
-                       class="nav-link">
-
-                        <i class="bi bi-cash-stack me-2"></i>
-
-                        Fees
-
-                    </a>
-
-                </li>
-
+               <li class="nav-item">
+           <a href="{{ route('fee-structures.index') }}" class="nav-link">
+           <i class="bi bi-cash-stack me-2"></i>
+           Fee Structures
+             </a>
+             </li>
 
                 {{-- Payments --}}
                 <li class="nav-item">
 
-                    <a href="#"
+                    <a href="{{route('payments.index')}}"
                        class="nav-link">
 
                         <i class="bi bi-credit-card me-2"></i>

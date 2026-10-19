@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fee_structures', function (Blueprint $table) {
-            $table->id();
-            
-            $table->timestamps();
+        Schema::table('payments', function (Blueprint $table) {
+            $table->string('mpesa_phone')->nullable()->after('payment_method');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fee_structures');
+        Schema::table('payments', function (Blueprint $table) {
+               $table->dropColumn('mpesa_phone');
+        });
     }
 };
